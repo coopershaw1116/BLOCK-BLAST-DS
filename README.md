@@ -1,0 +1,1 @@
+Block Blast! DS (Clearence!) is an accurate, comprehensive & fun DS port of the hit mobile game ```Block Blast!``` by ```Hungry Studios``` (includes DSI enhancments)
