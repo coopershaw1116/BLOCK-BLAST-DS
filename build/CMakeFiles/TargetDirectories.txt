@@ -1,0 +1,3 @@
+/home/coopershaw1116/block-blast-ds/build/CMakeFiles/BLOCK-BLAST-DS.dir
+/home/coopershaw1116/block-blast-ds/build/CMakeFiles/edit_cache.dir
+/home/coopershaw1116/block-blast-ds/build/CMakeFiles/rebuild_cache.dir
