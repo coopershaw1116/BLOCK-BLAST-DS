@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/coopershaw1116/BLOCK-BLAST-DS/build",
+  "command": "/usr/bin/clang -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -isystem /usr/include/SDL2 -g -std=gnu11 -o CMakeFiles/BLOCK-BLAST-DS.dir/src/core/main.c.o -c /home/coopershaw1116/BLOCK-BLAST-DS/src/core/main.c",
+  "file": "/home/coopershaw1116/BLOCK-BLAST-DS/src/core/main.c",
+  "output": "CMakeFiles/BLOCK-BLAST-DS.dir/src/core/main.c.o"
+},
+{
+  "directory": "/home/coopershaw1116/BLOCK-BLAST-DS/build",
+  "command": "/usr/bin/clang -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -isystem /usr/include/SDL2 -g -std=gnu11 -o CMakeFiles/BLOCK-BLAST-DS.dir/src/core/game.c.o -c /home/coopershaw1116/BLOCK-BLAST-DS/src/core/game.c",
+  "file": "/home/coopershaw1116/BLOCK-BLAST-DS/src/core/game.c",
+  "output": "CMakeFiles/BLOCK-BLAST-DS.dir/src/core/game.c.o"
+},
+{
+  "directory": "/home/coopershaw1116/BLOCK-BLAST-DS/build",
+  "command": "/usr/bin/clang -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -isystem /usr/include/SDL2 -g -std=gnu11 -o CMakeFiles/BLOCK-BLAST-DS.dir/src/core/piece.c.o -c /home/coopershaw1116/BLOCK-BLAST-DS/src/core/piece.c",
+  "file": "/home/coopershaw1116/BLOCK-BLAST-DS/src/core/piece.c",
+  "output": "CMakeFiles/BLOCK-BLAST-DS.dir/src/core/piece.c.o"
+},
+{
+  "directory": "/home/coopershaw1116/BLOCK-BLAST-DS/build",
+  "command": "/usr/bin/clang -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -isystem /usr/include/SDL2 -g -std=gnu11 -o CMakeFiles/BLOCK-BLAST-DS.dir/src/input/input.c.o -c /home/coopershaw1116/BLOCK-BLAST-DS/src/input/input.c",
+  "file": "/home/coopershaw1116/BLOCK-BLAST-DS/src/input/input.c",
+  "output": "CMakeFiles/BLOCK-BLAST-DS.dir/src/input/input.c.o"
+},
+{
+  "directory": "/home/coopershaw1116/BLOCK-BLAST-DS/build",
+  "command": "/usr/bin/clang -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -isystem /usr/include/SDL2 -g -std=gnu11 -o CMakeFiles/BLOCK-BLAST-DS.dir/src/rendering/render.c.o -c /home/coopershaw1116/BLOCK-BLAST-DS/src/rendering/render.c",
+  "file": "/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering/render.c",
+  "output": "CMakeFiles/BLOCK-BLAST-DS.dir/src/rendering/render.c.o"
+},
+{
+  "directory": "/home/coopershaw1116/BLOCK-BLAST-DS/build",
+  "command": "/usr/bin/clang -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -isystem /usr/include/SDL2 -g -std=gnu11 -o CMakeFiles/BLOCK-BLAST-DS.dir/src/platform/platform_sdl2.c.o -c /home/coopershaw1116/BLOCK-BLAST-DS/src/platform/platform_sdl2.c",
+  "file": "/home/coopershaw1116/BLOCK-BLAST-DS/src/platform/platform_sdl2.c",
+  "output": "CMakeFiles/BLOCK-BLAST-DS.dir/src/platform/platform_sdl2.c.o"
+}
+]

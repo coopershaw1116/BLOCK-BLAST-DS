@@ -3,99 +3,79 @@
     INPUT IMPLEMENTATION
     =====================================
     
-    Handles keyboard input for game control.
+    Platform-independent input handling.
+    Translates input commands to game actions.
 */
 
 #include "input.h"
 
 /*
-    Input_HandleEvent
-    =================
-    Processes keyboard input and updates game state.
+    Input_HandleCursorMove
+    ======================
+    Moves cursor in specified direction.
     
-    Key Bindings:
-    - LEFT/RIGHT: Move cursor horizontally
-    - UP/DOWN: Move cursor vertically
-    - Q: Previous piece (cycle backwards)
-    - E: Next piece (cycle forwards)
+    Direction: 0=up, 1=down, 2=left, 3=right
 */
-void Input_HandleEvent(SDL_Event* event, GameState* game)
+void Input_HandleCursorMove(GameState* game, int direction)
 {
-    /* Only process key down events */
-    if (event->type != SDL_KEYDOWN)
+    switch (direction)
     {
-        return;
-    }
-
-    switch (event->key.keysym.sym)
-    {
-        /*
-            Cursor Movement
-            ===============
-        */
-        case SDLK_LEFT:
-            if (game->cursorX > 0)
-                game->cursorX--;
-            break;
-
-        case SDLK_RIGHT:
-            if (game->cursorX < GRID_SIZE - 1)
-                game->cursorX++;
-            break;
-
-        case SDLK_UP:
+        case 0:  /* Up */
             if (game->cursorY > 0)
                 game->cursorY--;
             break;
-
-        case SDLK_DOWN:
+        case 1:  /* Down */
             if (game->cursorY < GRID_SIZE - 1)
                 game->cursorY++;
             break;
-
-        /*
-            Piece Selection Cycling
-            ======================
-            Skip pieces that have already been used
-        */
-        case SDLK_q:
-        {
-            int prevSelected = game->selectedPiece;
-            game->selectedPiece--;
-
-            if (game->selectedPiece < 0)
-                game->selectedPiece = 2;
-
-            /* Skip if piece is already used */
-            if (game->pieceUsed[game->selectedPiece])
-            {
-                game->selectedPiece = prevSelected;
-            }
+        case 2:  /* Left */
+            if (game->cursorX > 0)
+                game->cursorX--;
             break;
-        }
-
-        case SDLK_e:
-        {
-            int prevSelected = game->selectedPiece;
-            game->selectedPiece++;
-
-            if (game->selectedPiece > 2)
-                game->selectedPiece = 0;
-
-            /* Skip if piece is already used */
-            if (game->pieceUsed[game->selectedPiece])
-            {
-                game->selectedPiece = prevSelected;
-            }
-            break;
-        }
-
-        /*
-            Piece Placement
-            ===============
-        */
-        case SDLK_SPACE:
-            Game_PlacePiece(game);
+        case 3:  /* Right */
+            if (game->cursorX < GRID_SIZE - 1)
+                game->cursorX++;
             break;
     }
+}
+
+/*
+    Input_HandlePieceSelect
+    =======================
+    Cycles piece selection forward or backward.
+    
+    Direction: 0=previous, 1=next
+*/
+void Input_HandlePieceSelect(GameState* game, int direction)
+{
+    int prevSelected = game->selectedPiece;
+    
+    if (direction == 0)  /* Previous */
+    {
+        game->selectedPiece--;
+        if (game->selectedPiece < 0)
+            game->selectedPiece = 2;
+    }
+    else  /* Next */
+    {
+        game->selectedPiece++;
+        if (game->selectedPiece > 2)
+            game->selectedPiece = 0;
+    }
+    
+    /* Skip if piece is already used */
+    if (game->pieceUsed[game->selectedPiece])
+    {
+        game->selectedPiece = prevSelected;
+    }
+}
+
+/*
+    Input_HandlePlacePiece
+    ======================
+    Attempts to place the currently selected piece.
+*/
+void Input_HandlePlacePiece(GameState* game)
+{
+    Game_PlacePiece(game);
 }

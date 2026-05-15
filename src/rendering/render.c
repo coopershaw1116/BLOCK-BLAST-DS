@@ -8,9 +8,13 @@
     - Game board grid rendering
     - Cursor and piece preview
     - Color coding and visual feedback
+    
+    SDL2-based implementation for PC/testing.
+    (DS rendering would be implemented separately with libnds)
 */
 
 #include <stdbool.h>
+#include <SDL2/SDL.h>
 #include "render.h"
 
 /*
@@ -110,8 +114,9 @@ float GetPieceScale(Piece* piece)
     - Top screen (0-192px): Piece selection UI
     - Bottom screen (192-384px): Game board with grid
 */
-void Render_Draw(SDL_Renderer* renderer, GameState* game)
+void Render_Draw(Renderer rendererPtr, GameState* game)
 {
+    SDL_Renderer* renderer = (SDL_Renderer*)rendererPtr;
     /*
         Clear Screen with background color
     */
@@ -261,6 +266,7 @@ void Render_Draw(SDL_Renderer* renderer, GameState* game)
         Placed Pieces
         =============
         Render all placed pieces on the board grid
+        Animating pieces are rendered with a bright flashing effect
     */
     for (int y = 0; y < GRID_SIZE; y++)
     {
@@ -276,11 +282,36 @@ void Render_Draw(SDL_Renderer* renderer, GameState* game)
                     TILE_PIXEL_SIZE
                 };
 
-                SDL_SetRenderDrawColor(renderer, 100, 150, 255, 255);
-                SDL_RenderFillRect(renderer, &block);
+                /* Check if cell is animating (being cleared) */
+                if (game->animation.cells[y][x] > 0)
+                {
+                    /* Flashing effect: alternate between bright and dim based on frame count */
+                    if ((game->animation.cells[y][x] / FLASH_INTERVAL) % 2 == 0)
+                    {
+                        /* Bright flash color */
+                        SDL_SetRenderDrawColor(renderer, 255, 255, 100, 255);
+                        SDL_RenderFillRect(renderer, &block);
+                        SDL_SetRenderDrawColor(renderer, 255, 255, 0, 255);
+                        SDL_RenderDrawRect(renderer, &block);
+                    }
+                    else
+                    {
+                        /* Dim color */
+                        SDL_SetRenderDrawColor(renderer, 100, 150, 255, 128);
+                        SDL_RenderFillRect(renderer, &block);
+                        SDL_SetRenderDrawColor(renderer, 60, 100, 200, 128);
+                        SDL_RenderDrawRect(renderer, &block);
+                    }
+                }
+                else
+                {
+                    /* Normal block rendering */
+                    SDL_SetRenderDrawColor(renderer, 100, 150, 255, 255);
+                    SDL_RenderFillRect(renderer, &block);
 
-                SDL_SetRenderDrawColor(renderer, 60, 100, 200, 255);
-                SDL_RenderDrawRect(renderer, &block);
+                    SDL_SetRenderDrawColor(renderer, 60, 100, 200, 255);
+                    SDL_RenderDrawRect(renderer, &block);
+                }
             }
         }
     }

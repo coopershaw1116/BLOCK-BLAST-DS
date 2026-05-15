@@ -71,6 +71,15 @@
 
 /*
     =========================
+    ANIMATION CONSTANTS
+    =========================
+    Flash effect timing for cleared blocks.
+*/
+#define CLEAR_ANIMATION_FRAMES 15
+#define FLASH_INTERVAL 3
+
+/*
+    =========================
     BOARD GRID
     =========================
     Tracks placed pieces on the game board.
@@ -80,6 +89,18 @@ typedef struct
 {
     int cells[GRID_SIZE][GRID_SIZE]; /* Board grid */
 } GameBoard;
+
+/*
+    =========================
+    ANIMATION GRID
+    =========================
+    Tracks clearing animation state for each cell.
+    0 = not animating, > 0 = frame counter for animation
+*/
+typedef struct
+{
+    int cells[GRID_SIZE][GRID_SIZE]; /* Animation frame counters */
+} AnimationState;
 
 /*
     Game State Structure
@@ -101,6 +122,7 @@ typedef struct
     int usedCount;                  /* Number of pieces placed from current hand */
     
     GameBoard board;                /* Game board grid */
+    AnimationState animation;       /* Clear animation state for each cell */
 } GameState;
 
 /*
@@ -126,5 +148,42 @@ int Game_PlacePiece(GameState* game);
     Resets the used piece tracking.
 */
 void Game_GenerateNewPieces(GameState* game);
+
+/*
+    Row Clearing System
+    ===================
+    Detects and clears complete rows, then applies gravity.
+*/
+
+/*
+    Game_ClearRows
+    ===============
+    Checks for complete rows and removes them.
+    Marks cells for animation before clearing.
+    Returns: Number of rows cleared
+*/
+int Game_ClearRows(GameState* game);
+
+/*
+    Game_ApplyGravity
+    =================
+    Shifts all blocks downward to fill empty spaces.
+    Called after rows are cleared to compact the board.
+*/
+void Game_ApplyGravity(GameState* game);
+
+/*
+    Animation System
+    =================
+*/
+
+/*
+    Game_UpdateAnimation
+    ====================
+    Updates animation timers for clearing effects.
+    Decrements frame counters each frame.
+    Should be called once per frame.
+*/
+void Game_UpdateAnimation(GameState* game);
 
 #endif

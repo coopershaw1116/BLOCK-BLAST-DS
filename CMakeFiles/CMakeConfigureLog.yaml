@@ -1,0 +1,227 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:15 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Linux - 6.17.0-23-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:15 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=arm7tdmi;-mtune=arm7tdmi;-fomit-frame-pointer;-ffast-math;-mthumb;-mthumb-interwork
+      Id flags:  
+      
+      The output was:
+      0
+      /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000800c
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:15 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t"
+      binary: "/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_24887/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_24887.dir/build.make CMakeFiles/cmTC_24887.dir/build
+        gmake[1]: Entering directory '/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t'
+        Building C object CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj
+        /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc   -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork    -v -o CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: /home/davem/projects/devkitpro/tool-packages/devkitarm/gcc/src/gcc-15.2.0/configure --host=x86_64-linux-gnu --build=x86_64-linux-gnu --target=arm-none-eabi --prefix=/opt/devkitpro/devkitARM --enable-languages=c,c++,objc,lto --with-march=armv4t --enable-cxx-flags=-ffunction-sections --disable-libstdcxx-verbose --enable-multilib --enable-interwork --enable-threads --disable-win32-registry --disable-nls --disable-debug --disable-libmudflap --disable-libssp --disable-libgomp --disable-libstdcxx-pch --enable-libstdcxx-time=yes --enable-libstdcxx-filesystem-ts --with-newlib --with-native-system-header-dir=/include --with-sysroot=/opt/devkitpro/devkitARM/arm-none-eabi --with-system-zlib --disable-tm-clone-registry --disable-__cxa_atexit --with-pkgversion=devkitARM --disable-nls --enable-lto --enable-plugins --with-bugurl=https://devkitpro.org --with-pkgversion=devkitARM --with-gmp=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpfr=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpc=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-isl=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-zstd=/opt/devkitpro/crosstools/x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (devkitARM) 
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_24887.dir/'
+         /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_24887.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork -mlibarch=armv4t -march=armv4t -version -fomit-frame-pointer -ffast-math -o /tmp/ccpEJn2Q.s
+        GNU C23 (devkitARM) version 15.2.0 (arm-none-eabi)
+        	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/devkitpro/devkitARM/arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/opt/devkitpro/devkitARM/arm-none-eabi/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include
+         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed
+         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: 2c7ff403ab3e8d5bfa636492a584d9f7
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_24887.dir/'
+         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -march=armv4t -mthumb-interwork -meabi=5 -o CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj /tmp/ccpEJn2Q.s
+        COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_24887
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24887.dir/link.txt --verbose=1
+        /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork   -v CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj -o cmTC_24887 
+        Using built-in specs.
+        COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc
+        COLLECT_LTO_WRAPPER=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: /home/davem/projects/devkitpro/tool-packages/devkitarm/gcc/src/gcc-15.2.0/configure --host=x86_64-linux-gnu --build=x86_64-linux-gnu --target=arm-none-eabi --prefix=/opt/devkitpro/devkitARM --enable-languages=c,c++,objc,lto --with-march=armv4t --enable-cxx-flags=-ffunction-sections --disable-libstdcxx-verbose --enable-multilib --enable-interwork --enable-threads --disable-win32-registry --disable-nls --disable-debug --disable-libmudflap --disable-libssp --disable-libgomp --disable-libstdcxx-pch --enable-libstdcxx-time=yes --enable-libstdcxx-filesystem-ts --with-newlib --with-native-system-header-dir=/include --with-sysroot=/opt/devkitpro/devkitARM/arm-none-eabi --with-system-zlib --disable-tm-clone-registry --disable-__cxa_atexit --with-pkgversion=devkitARM --disable-nls --enable-lto --enable-plugins --with-bugurl=https://devkitpro.org --with-pkgversion=devkitARM --with-gmp=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpfr=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpc=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-isl=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-zstd=/opt/devkitpro/crosstools/x86_64-linux-gnu
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (devkitARM) 
+        COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_24887' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_24887.'
+         /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccC6tBsn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lsysbase --sysroot=/opt/devkitpro/devkitARM/arm-none-eabi -X -o cmTC_24887 /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0 -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/opt/devkitpro/devkitARM/arm-none-eabi/lib CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lc -lsysbase --end-group /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o
+        /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000800c
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_24887' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_24887.'
+        gmake[1]: Leaving directory '/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:15 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include]
+          add: [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+          add: [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include] ==> [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include]
+        collapse include dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed] ==> [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+        collapse include dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include] ==> [/opt/devkitpro/devkitARM/arm-none-eabi/include]
+        implicit include dirs: [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed;/opt/devkitpro/devkitARM/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:15 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_24887/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_24887.dir/build.make CMakeFiles/cmTC_24887.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/coopershaw1116/BLOCK-BLAST-DS/CMakeFiles/CMakeScratch/TryCompile-KosG9t']
+        ignore line: [Building C object CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc   -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork    -v -o CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /home/davem/projects/devkitpro/tool-packages/devkitarm/gcc/src/gcc-15.2.0/configure --host=x86_64-linux-gnu --build=x86_64-linux-gnu --target=arm-none-eabi --prefix=/opt/devkitpro/devkitARM --enable-languages=c c++ objc lto --with-march=armv4t --enable-cxx-flags=-ffunction-sections --disable-libstdcxx-verbose --enable-multilib --enable-interwork --enable-threads --disable-win32-registry --disable-nls --disable-debug --disable-libmudflap --disable-libssp --disable-libgomp --disable-libstdcxx-pch --enable-libstdcxx-time=yes --enable-libstdcxx-filesystem-ts --with-newlib --with-native-system-header-dir=/include --with-sysroot=/opt/devkitpro/devkitARM/arm-none-eabi --with-system-zlib --disable-tm-clone-registry --disable-__cxa_atexit --with-pkgversion=devkitARM --disable-nls --enable-lto --enable-plugins --with-bugurl=https://devkitpro.org --with-pkgversion=devkitARM --with-gmp=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpfr=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpc=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-isl=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-zstd=/opt/devkitpro/crosstools/x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (devkitARM) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_24887.dir/']
+        ignore line: [ /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_24887.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork -mlibarch=armv4t -march=armv4t -version -fomit-frame-pointer -ffast-math -o /tmp/ccpEJn2Q.s]
+        ignore line: [GNU C23 (devkitARM) version 15.2.0 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/devkitpro/devkitARM/arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/opt/devkitpro/devkitARM/arm-none-eabi/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include]
+        ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+        ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 2c7ff403ab3e8d5bfa636492a584d9f7]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_24887.dir/']
+        ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -march=armv4t -mthumb-interwork -meabi=5 -o CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj /tmp/ccpEJn2Q.s]
+        ignore line: [COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_24887]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24887.dir/link.txt --verbose=1]
+        ignore line: [/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork   -v CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj -o cmTC_24887 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /home/davem/projects/devkitpro/tool-packages/devkitarm/gcc/src/gcc-15.2.0/configure --host=x86_64-linux-gnu --build=x86_64-linux-gnu --target=arm-none-eabi --prefix=/opt/devkitpro/devkitARM --enable-languages=c c++ objc lto --with-march=armv4t --enable-cxx-flags=-ffunction-sections --disable-libstdcxx-verbose --enable-multilib --enable-interwork --enable-threads --disable-win32-registry --disable-nls --disable-debug --disable-libmudflap --disable-libssp --disable-libgomp --disable-libstdcxx-pch --enable-libstdcxx-time=yes --enable-libstdcxx-filesystem-ts --with-newlib --with-native-system-header-dir=/include --with-sysroot=/opt/devkitpro/devkitARM/arm-none-eabi --with-system-zlib --disable-tm-clone-registry --disable-__cxa_atexit --with-pkgversion=devkitARM --disable-nls --enable-lto --enable-plugins --with-bugurl=https://devkitpro.org --with-pkgversion=devkitARM --with-gmp=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpfr=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-mpc=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-isl=/opt/devkitpro/crosstools/x86_64-linux-gnu --with-zstd=/opt/devkitpro/crosstools/x86_64-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (devkitARM) ]
+        ignore line: [COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_24887' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_24887.']
+        link line: [ /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccC6tBsn.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lsysbase --sysroot=/opt/devkitpro/devkitARM/arm-none-eabi -X -o cmTC_24887 /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0 -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/opt/devkitpro/devkitARM/arm-none-eabi/lib CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lc -lsysbase --end-group /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o]
+          arg [/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccC6tBsn.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lsysbase] ==> ignore
+          arg [--sysroot=/opt/devkitpro/devkitARM/arm-none-eabi] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_24887] ==> ignore
+          arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o]
+          arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o]
+          arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o]
+          arg [-L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb] ==> dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb]
+          arg [-L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb] ==> dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb]
+          arg [-L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb] ==> dir [/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb]
+          arg [-L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0] ==> dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0]
+          arg [-L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib]
+          arg [-L/opt/devkitpro/devkitARM/arm-none-eabi/lib] ==> dir [/opt/devkitpro/devkitARM/arm-none-eabi/lib]
+          arg [CMakeFiles/cmTC_24887.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lsysbase] ==> lib [sysbase]
+          arg [--end-group] ==> ignore
+          arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o]
+          arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o]
+        collapse library dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb] ==> [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb]
+        collapse library dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb] ==> [/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb]
+        collapse library dir [/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb] ==> [/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb]
+        collapse library dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0] ==> [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0]
+        collapse library dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> [/opt/devkitpro/devkitARM/arm-none-eabi/lib]
+        collapse library dir [/opt/devkitpro/devkitARM/arm-none-eabi/lib] ==> [/opt/devkitpro/devkitARM/arm-none-eabi/lib]
+        implicit libs: [gcc;c;sysbase]
+        implicit objs: [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o]
+        implicit dirs: [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb;/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0;/opt/devkitpro/devkitARM/arm-none-eabi/lib]
+        implicit fwks: []
+      
+      
+...

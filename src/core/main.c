@@ -3,65 +3,35 @@
     BLOCK BLAST DS - MAIN ENTRY POINT
     =====================================
     
-    Handles SDL2 window/renderer initialization,
-    game loop, and input/render coordination.
+    Platform-agnostic main loop.
+    Delegates rendering/input to platform abstraction layer.
+    Compiles for both PC (SDL2) and DS (libnds) targets.
 */
 
 #include <stdbool.h>
-#include <SDL2/SDL.h>
 
 #include "game.h"
-#include "../rendering/render.h"
-#include "../input/input.h"
+#include "../platform/platform.h"
 
 /*
     Main Game Loop
     ==============
-    - Initializes SDL2 and window
-    - Runs event loop with 60 FPS target
-    - Coordinates rendering and input handling
+    - Initializes platform
+    - Runs event loop at target frame rate
+    - Coordinates game updates with platform
     - Cleans up resources on exit
 */
 int main(int argc, char* argv[])
 {
     /*
-        Initialize SDL2
+        Initialize Platform
+        ===================
+        Sets up rendering and input system (SDL2 or libnds)
     */
-    if (SDL_Init(SDL_INIT_VIDEO) != 0)
+    if (Platform_Init() != 0)
     {
         return 1;
     }
-
-    /*
-        Create Game Window
-        ==================
-        DS resolution (256x384) displayed at native size
-    */
-    SDL_Window* window = SDL_CreateWindow(
-        "BLOCK BLAST DS",
-        SDL_WINDOWPOS_CENTERED,
-        SDL_WINDOWPOS_CENTERED,
-        DS_WIDTH,
-        DS_HEIGHT,
-        SDL_WINDOW_SHOWN
-    );
-
-    if (!window)
-    {
-        SDL_Quit();
-        return 1;
-    }
-
-    /*
-        Create Renderer
-        ===============
-        Hardware accelerated rendering for better performance
-    */
-    SDL_Renderer* renderer = SDL_CreateRenderer(
-        window,
-        -1,
-        SDL_RENDERER_ACCELERATED
-    );
 
     /*
         Initialize Game State
@@ -72,47 +42,38 @@ int main(int argc, char* argv[])
     /*
         Main Game Loop
         ==============
-        Runs until window is closed (SDL_QUIT event)
-        Target: 60 FPS (16ms per frame)
+        Runs until platform signals exit
+        Target: 60 FPS
     */
-    bool running = true;
-
-    while (running)
+    while (!Platform_ShouldQuit())
     {
         /*
-            Process Input Events
+            Update Game State
+            =================
+            Process animations and frame updates
         */
-        SDL_Event event;
+        Game_UpdateAnimation(&game);
 
-        while (SDL_PollEvent(&event))
-        {
-            if (event.type == SDL_QUIT)
-            {
-                running = false;
-            }
-
-            Input_HandleEvent(&event, &game);
-        }
+        /*
+            Process Input
+        */
+        Platform_UpdateInput(&game);
 
         /*
             Render Frame
         */
-        Render_Draw(renderer, &game);
+        Platform_Render(&game);
 
         /*
             Frame Timing
-            ============
-            16ms delay ≈ 60 FPS
         */
-        SDL_Delay(16);
+        Platform_FrameTiming();
     }
 
     /*
-        Cleanup Resources
+        Cleanup
     */
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    Platform_Shutdown();
 
     return 0;
 }
