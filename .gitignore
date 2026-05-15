@@ -1,0 +1,12 @@
+# Build outputs
+build/
+build-pc/
+*.nds
+*.elf
+*.bin
+*.map
+*.lst
+
+# CMake
+CMakeCache.txt
+CMakeFiles/

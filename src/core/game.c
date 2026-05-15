@@ -7,7 +7,6 @@
 */
 
 #include <stdlib.h>
-#include <time.h>
 
 #include "game.h"
 
@@ -84,37 +83,22 @@ static void Game_StartClearing(GameState* game)
     game->phase = GAME_PHASE_CLEARING;
 }
 
-/*
-    Game_Init
-    =========
-    Initializes the game state with:
-    - Cursor at origin (0, 0)
-    - Random piece selection for the player's hand
-    - Random seed set for procedural generation
-*/
-void Game_Init(GameState* game)
+void Game_InitSeeded(GameState* game, unsigned int seed)
 {
-    /* Initialize cursor position */
     game->cursorX = 0;
     game->cursorY = 0;
-
-    /* Select first piece as default */
     game->selectedPiece = 0;
-    
-    /* Initialize piece usage tracking */
     game->usedCount = 0;
+
     for (int i = 0; i < 3; i++)
     {
         game->pieceUsed[i] = 0;
     }
 
-    /* Seed random number generator */
-    srand(time(NULL));
+    srand((int)seed);
 
-    /* Populate player's hand with 3 random pieces */
     Game_GenerateNewPieces(game);
 
-    /* Initialize board (all cells empty) */
     for (int y = 0; y < GRID_SIZE; y++)
     {
         for (int x = 0; x < GRID_SIZE; x++)
@@ -127,6 +111,11 @@ void Game_Init(GameState* game)
     game->clearingRows = 0;
     game->clearingCols = 0;
     game->clearAnimFrame = 0;
+}
+
+void Game_Init(GameState* game)
+{
+    Game_InitSeeded(game, 1u);
 }
 
 /*

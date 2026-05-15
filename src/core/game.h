@@ -128,6 +128,7 @@ typedef struct
     ==============
 */
 void Game_Init(GameState* game);
+void Game_InitSeeded(GameState* game, unsigned int seed);
 
 /*
     Piece Placement

@@ -1,0 +1,31 @@
+#---------------------------------------------------------------------------------
+# PC/SDL desktop test build (optional — not used for .nds)
+# Output: build-pc/BLOCK-BLAST-DS
+#---------------------------------------------------------------------------------
+
+CC      := gcc
+CFLAGS  := -std=c11 -Wall -Wextra -O2 \
+           -Isrc/core -Isrc/platform \
+           $(shell pkg-config --cflags sdl2)
+LDFLAGS := $(shell pkg-config --libs sdl2)
+
+SRCS    := src/core/game.c \
+           src/core/piece.c \
+           src/platform/pc/main_pc.c \
+           src/platform/pc/input_pc.c \
+           src/platform/pc/render_pc.c
+
+OUT     := build-pc/BLOCK-BLAST-DS
+
+.PHONY: all clean
+
+all: $(OUT)
+
+$(OUT): $(SRCS) | build-pc
+	$(CC) $(CFLAGS) $(SRCS) -o $@ $(LDFLAGS)
+
+build-pc:
+	@mkdir -p build-pc
+
+clean:
+	rm -rf build-pc
