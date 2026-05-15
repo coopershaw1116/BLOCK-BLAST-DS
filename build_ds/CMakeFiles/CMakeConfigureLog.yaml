@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
-      - "CMakeLists.txt:15 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       The target system is: Generic -  - arm
       The host system is: Linux - 6.17.0-23-generic - x86_64
@@ -15,7 +15,7 @@ events:
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:15 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc 
@@ -30,19 +30,19 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/3.28.3/CompilerIdC/a.out
+        /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/3.28.3/CompilerIdC/a.out
       
   -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:15 (project)"
+      - "CMakeLists.txt:9 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP"
-      binary: "/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP"
+      source: "/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4"
+      binary: "/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork"
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -51,13 +51,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP'
+        Change Dir: '/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_863bb/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_863bb.dir/build.make CMakeFiles/cmTC_863bb.dir/build
-        gmake[1]: Entering directory '/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP'
-        Building C object CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj
-        /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc   -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork    -v -o CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d2b06/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d2b06.dir/build.make CMakeFiles/cmTC_d2b06.dir/build
+        gmake[1]: Entering directory '/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4'
+        Building C object CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj
+        /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc   -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork    -v -o CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -65,8 +65,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (devkitARM) 
-        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_863bb.dir/'
-         /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_863bb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork -mlibarch=armv4t -march=armv4t -version -fomit-frame-pointer -ffast-math -o /tmp/cc1fUdCV.s
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d2b06.dir/'
+         /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d2b06.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork -mlibarch=armv4t -march=armv4t -version -fomit-frame-pointer -ffast-math -o /tmp/ccUCn8TO.s
         GNU C23 (devkitARM) version 15.2.0 (arm-none-eabi)
         	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -80,14 +80,14 @@ events:
          /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 2c7ff403ab3e8d5bfa636492a584d9f7
-        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_863bb.dir/'
-         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -march=armv4t -mthumb-interwork -meabi=5 -o CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj /tmp/cc1fUdCV.s
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d2b06.dir/'
+         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -march=armv4t -mthumb-interwork -meabi=5 -o CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj /tmp/ccUCn8TO.s
         COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_863bb
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_863bb.dir/link.txt --verbose=1
-        /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork   -v CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj -o cmTC_863bb 
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_d2b06
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2b06.dir/link.txt --verbose=1
+        /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork   -v CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj -o cmTC_d2b06 
         Using built-in specs.
         COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc
         COLLECT_LTO_WRAPPER=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper
@@ -98,11 +98,11 @@ events:
         gcc version 15.2.0 (devkitARM) 
         COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_863bb' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_863bb.'
-         /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjnArp9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lsysbase --sysroot=/opt/devkitpro/devkitARM/arm-none-eabi -X -o cmTC_863bb /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0 -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/opt/devkitpro/devkitARM/arm-none-eabi/lib CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lc -lsysbase --end-group /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_d2b06' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_d2b06.'
+         /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDf0N1H.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lsysbase --sysroot=/opt/devkitpro/devkitARM/arm-none-eabi -X -o cmTC_d2b06 /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0 -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/opt/devkitpro/devkitARM/arm-none-eabi/lib CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lc -lsysbase --end-group /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o
         /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000800c
-        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_863bb' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_863bb.'
-        gmake[1]: Leaving directory '/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP'
+        COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_d2b06' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_d2b06.'
+        gmake[1]: Leaving directory '/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4'
         
       exitCode: 0
   -
@@ -110,7 +110,7 @@ events:
     backtrace:
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
       - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:15 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -130,17 +130,17 @@ events:
     backtrace:
       - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
       - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:15 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP']
+        ignore line: [Change Dir: '/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_863bb/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_863bb.dir/build.make CMakeFiles/cmTC_863bb.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-zz0FnP']
-        ignore line: [Building C object CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc   -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork    -v -o CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d2b06/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_d2b06.dir/build.make CMakeFiles/cmTC_d2b06.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/CMakeScratch/TryCompile-0ObtW4']
+        ignore line: [Building C object CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc   -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork    -v -o CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -148,8 +148,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (devkitARM) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_863bb.dir/']
-        ignore line: [ /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_863bb.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork -mlibarch=armv4t -march=armv4t -version -fomit-frame-pointer -ffast-math -o /tmp/cc1fUdCV.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d2b06.dir/']
+        ignore line: [ /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d2b06.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork -mlibarch=armv4t -march=armv4t -version -fomit-frame-pointer -ffast-math -o /tmp/ccUCn8TO.s]
         ignore line: [GNU C23 (devkitARM) version 15.2.0 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -163,14 +163,14 @@ events:
         ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2c7ff403ab3e8d5bfa636492a584d9f7]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_863bb.dir/']
-        ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -march=armv4t -mthumb-interwork -meabi=5 -o CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj /tmp/cc1fUdCV.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d2b06.dir/']
+        ignore line: [ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -march=armv4t -mthumb-interwork -meabi=5 -o CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj /tmp/ccUCn8TO.s]
         ignore line: [COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_863bb]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_863bb.dir/link.txt --verbose=1]
-        ignore line: [/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork   -v CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj -o cmTC_863bb ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj' '-c' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_d2b06]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2b06.dir/link.txt --verbose=1]
+        ignore line: [/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork   -v CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj -o cmTC_d2b06 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper]
@@ -181,20 +181,20 @@ events:
         ignore line: [gcc version 15.2.0 (devkitARM) ]
         ignore line: [COMPILER_PATH=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/opt/devkitpro/devkitARM/arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_863bb' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_863bb.']
-        link line: [ /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjnArp9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lsysbase --sysroot=/opt/devkitpro/devkitARM/arm-none-eabi -X -o cmTC_863bb /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0 -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/opt/devkitpro/devkitARM/arm-none-eabi/lib CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lc -lsysbase --end-group /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=arm7tdmi' '-mtune=arm7tdmi' '-fomit-frame-pointer' '-ffast-math' '-mthumb' '-mthumb-interwork' '-v' '-o' 'cmTC_d2b06' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'cmTC_d2b06.']
+        link line: [ /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDf0N1H.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lsysbase --sysroot=/opt/devkitpro/devkitARM/arm-none-eabi -X -o cmTC_d2b06 /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/arm-none-eabi/lib/thumb -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0 -L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/opt/devkitpro/devkitARM/arm-none-eabi/lib CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj --start-group -lgcc -lc -lsysbase --end-group /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtend.o /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtn.o]
           arg [/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/opt/devkitpro/devkitARM/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccjnArp9.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccDf0N1H.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lsysbase] ==> ignore
           arg [--sysroot=/opt/devkitpro/devkitARM/arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_863bb] ==> ignore
+          arg [cmTC_d2b06] ==> ignore
           arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtfastmath.o]
           arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crti.o]
           arg [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o] ==> obj [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/thumb/crtbegin.o]
@@ -204,7 +204,7 @@ events:
           arg [-L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0] ==> dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0]
           arg [-L/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> dir [/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib]
           arg [-L/opt/devkitpro/devkitARM/arm-none-eabi/lib] ==> dir [/opt/devkitpro/devkitARM/arm-none-eabi/lib]
-          arg [CMakeFiles/cmTC_863bb.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_d2b06.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--start-group] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]

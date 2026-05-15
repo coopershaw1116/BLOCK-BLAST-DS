@@ -4,7 +4,7 @@
 # compile C with /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/coopershaw1116/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/BLOCK-BLAST-DS/src/platform -I/opt/devkitpro/libnds/include
+C_INCLUDES = -I/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core -I/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/rendering -I/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/input -I/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/platform -I/opt/devkitpro/libnds/include
 
 C_FLAGS = -mcpu=arm7tdmi -mtune=arm7tdmi -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -std=gnu11 -mcpu=arm7tdmi -mtune=arm7tdmi -mthumb -mthumb-interwork
 

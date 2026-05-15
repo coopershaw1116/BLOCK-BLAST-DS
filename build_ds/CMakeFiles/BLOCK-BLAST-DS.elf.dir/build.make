@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/coopershaw1116/BLOCK-BLAST-DS
+CMAKE_SOURCE_DIR = /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/coopershaw1116/BLOCK-BLAST-DS/build_ds
+CMAKE_BINARY_DIR = /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BLOCK-BLAST-DS.elf.dir/depend.make
@@ -70,88 +70,88 @@ include CMakeFiles/BLOCK-BLAST-DS.elf.dir/progress.make
 include CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
-CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj: /home/coopershaw1116/BLOCK-BLAST-DS/src/core/main.c
+CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj: /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/main.c
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj -c /home/coopershaw1116/BLOCK-BLAST-DS/src/core/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj"
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.obj -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/main.c
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.i"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/BLOCK-BLAST-DS/src/core/main.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.i
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/main.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.i
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.s"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/BLOCK-BLAST-DS/src/core/main.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.s
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/main.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/main.c.s
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
-CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj: /home/coopershaw1116/BLOCK-BLAST-DS/src/core/game.c
+CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj: /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/game.c
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj -c /home/coopershaw1116/BLOCK-BLAST-DS/src/core/game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj"
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.obj -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/game.c
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.i"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/BLOCK-BLAST-DS/src/core/game.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.i
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/game.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.i
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.s"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/BLOCK-BLAST-DS/src/core/game.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.s
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/game.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/game.c.s
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
-CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj: /home/coopershaw1116/BLOCK-BLAST-DS/src/core/piece.c
+CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj: /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/piece.c
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj -c /home/coopershaw1116/BLOCK-BLAST-DS/src/core/piece.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj"
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.obj -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/piece.c
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.i"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/BLOCK-BLAST-DS/src/core/piece.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.i
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/piece.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.i
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.s"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/BLOCK-BLAST-DS/src/core/piece.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.s
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/core/piece.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/core/piece.c.s
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
-CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj: /home/coopershaw1116/BLOCK-BLAST-DS/src/input/input.c
+CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj: /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/input/input.c
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj -c /home/coopershaw1116/BLOCK-BLAST-DS/src/input/input.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj"
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.obj -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/input/input.c
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.i"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/BLOCK-BLAST-DS/src/input/input.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.i
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/input/input.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.i
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.s"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/BLOCK-BLAST-DS/src/input/input.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.s
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/input/input.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/input/input.c.s
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
-CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj: /home/coopershaw1116/BLOCK-BLAST-DS/src/rendering/render_ds.c
+CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj: /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/rendering/render_ds.c
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj -c /home/coopershaw1116/BLOCK-BLAST-DS/src/rendering/render_ds.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj"
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.obj -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/rendering/render_ds.c
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.i"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/BLOCK-BLAST-DS/src/rendering/render_ds.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.i
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/rendering/render_ds.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.i
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.s"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/BLOCK-BLAST-DS/src/rendering/render_ds.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.s
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/rendering/render_ds.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.s
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/flags.make
-CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj: /home/coopershaw1116/BLOCK-BLAST-DS/src/platform/platform_ds.c
+CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj: /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/platform/platform_ds.c
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj: CMakeFiles/BLOCK-BLAST-DS.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj -c /home/coopershaw1116/BLOCK-BLAST-DS/src/platform/platform_ds.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj"
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj -MF CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj.d -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/platform/platform_ds.c
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.i"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/BLOCK-BLAST-DS/src/platform/platform_ds.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.i
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/platform/platform_ds.c > CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.i
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.s"
-	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/BLOCK-BLAST-DS/src/platform/platform_ds.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.s
+	/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/src/platform/platform_ds.c -o CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.s
 
 # Object files for target BLOCK-BLAST-DS.elf
 BLOCK__BLAST__DS_elf_OBJECTS = \
@@ -173,10 +173,10 @@ BLOCK-BLAST-DS.elf: CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/rendering/render_ds.c.
 BLOCK-BLAST-DS.elf: CMakeFiles/BLOCK-BLAST-DS.elf.dir/src/platform/platform_ds.c.obj
 BLOCK-BLAST-DS.elf: CMakeFiles/BLOCK-BLAST-DS.elf.dir/build.make
 BLOCK-BLAST-DS.elf: CMakeFiles/BLOCK-BLAST-DS.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable BLOCK-BLAST-DS.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable BLOCK-BLAST-DS.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BLOCK-BLAST-DS.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Generating NDS file..."
-	/opt/devkitpro/tools/bin/ndstool -c /home/coopershaw1116/BLOCK-BLAST-DS/build_ds/BLOCK-BLAST-DS.nds -9 BLOCK-BLAST-DS.elf
+	/opt/devkitpro/tools/bin/ndstool -c /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/BLOCK-BLAST-DS.nds -9 BLOCK-BLAST-DS.elf
 
 # Rule to build all files generated by this target.
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/build: BLOCK-BLAST-DS.elf
@@ -187,6 +187,6 @@ CMakeFiles/BLOCK-BLAST-DS.elf.dir/clean:
 .PHONY : CMakeFiles/BLOCK-BLAST-DS.elf.dir/clean
 
 CMakeFiles/BLOCK-BLAST-DS.elf.dir/depend:
-	cd /home/coopershaw1116/BLOCK-BLAST-DS/build_ds && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/coopershaw1116/BLOCK-BLAST-DS /home/coopershaw1116/BLOCK-BLAST-DS /home/coopershaw1116/BLOCK-BLAST-DS/build_ds /home/coopershaw1116/BLOCK-BLAST-DS/build_ds /home/coopershaw1116/BLOCK-BLAST-DS/build_ds/CMakeFiles/BLOCK-BLAST-DS.elf.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds /home/coopershaw1116/backups/alpha-unstable-refactor-b2-1/BLOCK-BLAST-DS/build_ds/CMakeFiles/BLOCK-BLAST-DS.elf.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/BLOCK-BLAST-DS.elf.dir/depend
 
