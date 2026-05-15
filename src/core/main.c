@@ -94,6 +94,8 @@ int main(int argc, char* argv[])
             Input_HandleEvent(&event, &game);
         }
 
+        Game_Update(&game);
+
         /*
             Render Frame
         */

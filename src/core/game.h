@@ -11,6 +11,8 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <stdint.h>
+
 #include "piece.h"
 
 /*
@@ -71,6 +73,19 @@
 
 /*
     =========================
+    LINE CLEARING
+    =========================
+*/
+#define CLEAR_ANIM_FRAMES 12
+
+typedef enum
+{
+    GAME_PHASE_PLAYING,
+    GAME_PHASE_CLEARING
+} GamePhase;
+
+/*
+    =========================
     BOARD GRID
     =========================
     Tracks placed pieces on the game board.
@@ -101,6 +116,11 @@ typedef struct
     int usedCount;                  /* Number of pieces placed from current hand */
     
     GameBoard board;                /* Game board grid */
+
+    GamePhase phase;                /* Playing or line-clear animation */
+    uint8_t clearingRows;           /* Bitmask of full rows to clear */
+    uint8_t clearingCols;           /* Bitmask of full columns to clear */
+    uint8_t clearAnimFrame;         /* Current clear animation frame */
 } GameState;
 
 /*
@@ -126,5 +146,12 @@ int Game_PlacePiece(GameState* game);
     Resets the used piece tracking.
 */
 void Game_GenerateNewPieces(GameState* game);
+
+/*
+    Game Update
+    ===========
+    Advances clear animation; applies board clear when animation finishes.
+*/
+void Game_Update(GameState* game);
 
 #endif

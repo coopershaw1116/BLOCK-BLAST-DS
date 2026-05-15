@@ -13,6 +13,12 @@
 #include <stdbool.h>
 #include "render.h"
 
+static bool CellIsClearing(const GameState* game, int x, int y)
+{
+    return (game->clearingRows & (uint8_t)(1u << y)) != 0 ||
+           (game->clearingCols & (uint8_t)(1u << x)) != 0;
+}
+
 /*
     =====================================
     UI RENDERING HELPERS
@@ -262,28 +268,67 @@ void Render_Draw(SDL_Renderer* renderer, GameState* game)
         =============
         Render all placed pieces on the board grid
     */
+    SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+
     for (int y = 0; y < GRID_SIZE; y++)
     {
         for (int x = 0; x < GRID_SIZE; x++)
         {
-            if (game->board.cells[y][x] != 0)
+            if (game->board.cells[y][x] == 0)
             {
-                SDL_Rect block =
-                {
-                    BOARD_OFFSET_X + x * TILE_PIXEL_SIZE,
-                    BOARD_OFFSET_Y + y * TILE_PIXEL_SIZE,
-                    TILE_PIXEL_SIZE,
-                    TILE_PIXEL_SIZE
-                };
+                continue;
+            }
 
-                SDL_SetRenderDrawColor(renderer, 100, 150, 255, 255);
+            int px = BOARD_OFFSET_X + x * TILE_PIXEL_SIZE;
+            int py = BOARD_OFFSET_Y + y * TILE_PIXEL_SIZE;
+            int size = TILE_PIXEL_SIZE;
+            int inset = 0;
+            uint8_t r = 100;
+            uint8_t g = 150;
+            uint8_t b = 255;
+            uint8_t alpha = 255;
+
+            if (game->phase == GAME_PHASE_CLEARING && CellIsClearing(game, x, y))
+            {
+                int frame = game->clearAnimFrame;
+
+                if (frame < 6)
+                {
+                    r = 255;
+                    g = 255;
+                    b = 200;
+                }
+                else
+                {
+                    inset = (frame - 6) * 2;
+                    if (inset > size / 2)
+                    {
+                        inset = size / 2;
+                    }
+                    alpha = (uint8_t)(255 - ((frame - 6) * 255 / 5));
+                }
+            }
+
+            SDL_Rect block =
+            {
+                px + inset,
+                py + inset,
+                size - inset * 2,
+                size - inset * 2
+            };
+
+            if (block.w > 0 && block.h > 0)
+            {
+                SDL_SetRenderDrawColor(renderer, r, g, b, alpha);
                 SDL_RenderFillRect(renderer, &block);
 
-                SDL_SetRenderDrawColor(renderer, 60, 100, 200, 255);
+                SDL_SetRenderDrawColor(renderer, 60, 100, 200, alpha);
                 SDL_RenderDrawRect(renderer, &block);
             }
         }
     }
+
+    SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_NONE);
 
     /*
         =====================================

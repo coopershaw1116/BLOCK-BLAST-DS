@@ -21,6 +21,11 @@
 */
 void Input_HandleEvent(SDL_Event* event, GameState* game)
 {
+    if (game->phase != GAME_PHASE_PLAYING)
+    {
+        return;
+    }
+
     /* Only process key down events */
     if (event->type != SDL_KEYDOWN)
     {

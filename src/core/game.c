@@ -11,6 +11,79 @@
 
 #include "game.h"
 
+static int Game_DetectClears(GameState* game, uint8_t* rows, uint8_t* cols)
+{
+    uint8_t rowMask = 0;
+    uint8_t colMask = 0;
+
+    for (int y = 0; y < GRID_SIZE; y++)
+    {
+        uint8_t occ = 0;
+        for (int x = 0; x < GRID_SIZE; x++)
+        {
+            if (game->board.cells[y][x])
+            {
+                occ |= (uint8_t)(1u << x);
+            }
+        }
+        if (occ == 0xFF)
+        {
+            rowMask |= (uint8_t)(1u << y);
+        }
+    }
+
+    for (int x = 0; x < GRID_SIZE; x++)
+    {
+        uint8_t occ = 0;
+        for (int y = 0; y < GRID_SIZE; y++)
+        {
+            if (game->board.cells[y][x])
+            {
+                occ |= (uint8_t)(1u << y);
+            }
+        }
+        if (occ == 0xFF)
+        {
+            colMask |= (uint8_t)(1u << x);
+        }
+    }
+
+    *rows = rowMask;
+    *cols = colMask;
+    return rowMask != 0 || colMask != 0;
+}
+
+static void Game_ApplyClears(GameState* game)
+{
+    for (int y = 0; y < GRID_SIZE; y++)
+    {
+        for (int x = 0; x < GRID_SIZE; x++)
+        {
+            if ((game->clearingRows & (uint8_t)(1u << y)) ||
+                (game->clearingCols & (uint8_t)(1u << x)))
+            {
+                game->board.cells[y][x] = 0;
+            }
+        }
+    }
+}
+
+static void Game_StartClearing(GameState* game)
+{
+    uint8_t rows = 0;
+    uint8_t cols = 0;
+
+    if (!Game_DetectClears(game, &rows, &cols))
+    {
+        return;
+    }
+
+    game->clearingRows = rows;
+    game->clearingCols = cols;
+    game->clearAnimFrame = 0;
+    game->phase = GAME_PHASE_CLEARING;
+}
+
 /*
     Game_Init
     =========
@@ -49,6 +122,11 @@ void Game_Init(GameState* game)
             game->board.cells[y][x] = 0;
         }
     }
+
+    game->phase = GAME_PHASE_PLAYING;
+    game->clearingRows = 0;
+    game->clearingCols = 0;
+    game->clearAnimFrame = 0;
 }
 
 /*
@@ -151,5 +229,26 @@ int Game_PlacePiece(GameState* game)
         Game_GenerateNewPieces(game);
     }
 
+    Game_StartClearing(game);
+
     return 1; /* Success */
+}
+
+void Game_Update(GameState* game)
+{
+    if (game->phase != GAME_PHASE_CLEARING)
+    {
+        return;
+    }
+
+    game->clearAnimFrame++;
+
+    if (game->clearAnimFrame >= CLEAR_ANIM_FRAMES)
+    {
+        Game_ApplyClears(game);
+        game->clearingRows = 0;
+        game->clearingCols = 0;
+        game->clearAnimFrame = 0;
+        game->phase = GAME_PHASE_PLAYING;
+    }
 }
